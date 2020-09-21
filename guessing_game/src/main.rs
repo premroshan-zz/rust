@@ -9,6 +9,8 @@ fn main() {
     let mut guess = String::new();
     let secret_number = rand::thread_rng().gen_range(1,101);
 
+    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+
     println!("The secret number is {}",secret_number);
 
     io::stdin().read_line(&mut guess)
